@@ -29,4 +29,6 @@ jobs:
           restore-keys: ${{ runner.os }}-m2
       - name: replace text
         run: |
+          cat $GITHUB_WORKSPACE/.github/workflows/settings.xml
           sed -i 's/${server.token}/${{secrets.SOME_TOKEN}}/' $GITHUB_WORKSPACE/.github/workflows/settings.xml
+          cat $GITHUB_WORKSPACE/.github/workflows/settings.xml
