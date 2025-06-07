@@ -27,3 +27,6 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: replace text
+        run: |
+          sed -i 's/${server.token}/${{secrets.SOME_TOKEN}}/' $GITHUB_WORKSPACE/.github/workflows/settings.xml
