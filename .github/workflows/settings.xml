@@ -1,1 +1,1 @@
-<name>${secrets.token}</name>
+<name>${server.token}</name>
