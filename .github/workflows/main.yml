@@ -1,10 +1,6 @@
 name: testing-workflows
 
-on:
-  pull_request:
-    types:
-      - opened
-      - synchronize
+on: push
 
 jobs:
   print-file:
